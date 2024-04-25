@@ -250,13 +250,13 @@ namespace Project_RPG
         }
 
         // 아이템 이름을 특정 색으로 반환하는 메서드
-        private string GetItemNameWithColor(ItemSet item)
+        public static string GetItemNameWithColor(ItemSet item)
         {
             string color = GetColorByRarity(item.ItemRarity);
             return color + item.ItemName + ConsoleColors.Reset;
         }
 
-        private string GetColorByRarity(Rarity rarity)
+        public static string GetColorByRarity(Rarity rarity)
         {
             switch (rarity)
             {

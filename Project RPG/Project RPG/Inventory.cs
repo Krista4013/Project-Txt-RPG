@@ -40,7 +40,8 @@ namespace Project_RPG
             for (var i = 0; i < Inventory.Count; i++)
             {
                 var item = Inventory[i];
-                Console.WriteLine($"{i + 1}. [{item.Eq}] {item.ItemName} | {item.Description} | {Shop.GetItemOptionText(item)}");
+                string itemName = Shop.GetItemNameWithColor(item); // 'Shop' 클래스의 메서드 호출
+                Console.WriteLine($"{i + 1}. [{item.Eq}] {itemName} | {item.Description} | {Shop.GetItemOptionText(item)}");
             }
 
             Console.WriteLine();
